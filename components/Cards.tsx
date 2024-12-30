@@ -24,7 +24,7 @@ export const FeaturedCard = ({ item: { image, rating, name, address, price }, on
         <Text className='text-xl font-rubik-extrabold text-white' numberOfLines={1}>{name}</Text>
         <Text className='text-base font-rubik text-white'>{address}</Text>
         <View className='flex flex-row items-center justify-between w-full'>
-          <Text className='text-xl font-rubik-extrabold text-white mt-1s'>{price}</Text>
+          <Text className='text-xl font-rubik-extrabold text-white mt-1s'>${price}</Text>
           <Image source={icons.heart} className='size-5' />
         </View>
       </View>
@@ -32,7 +32,7 @@ export const FeaturedCard = ({ item: { image, rating, name, address, price }, on
   )
 }
 
-export const Card = ({ item: { image, rating, name, address, price }, onPress }: Props) => {
+export const Card = ({ item: { image, name, address, price }, onPress }: Props) => {
   return (
     <TouchableOpacity
       className="flex-1 w-full mt-4 px-3 py-4 rounded-lg bg-white shadow-lg shadow-black-100/70 relative"
@@ -57,7 +57,7 @@ export const Card = ({ item: { image, rating, name, address, price }, onPress }:
 
         <View className="flex flex-row items-center justify-between mt-2">
           <Text className="text-base font-rubik-bold text-primary-300">
-            {price}
+            ${price}
           </Text>
           <Image
             source={icons.heart}
